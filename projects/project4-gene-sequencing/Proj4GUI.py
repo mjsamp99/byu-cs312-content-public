@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#/usr/bin/env python3
 
 import signal
 import sys
@@ -7,9 +7,9 @@ if PYQT_VER == 'PYQT5':
 	from PyQt5.QtWidgets import *
 	from PyQt5.QtGui import *
 	from PyQt5.QtCore import *
-elif PYQT_VER == 'PYQT4':
-	from PyQt4.QtGui import *
-	from PyQt4.QtCore import *
+# elif PYQT_VER == 'PYQT4':
+# 	from PyQt4.QtGui import *
+# 	from PyQt4.QtCore import *
 elif PYQT_VER == 'PYQT6':
 	from PyQt6.QtWidgets import *
 	from PyQt6.QtGui import *
@@ -113,7 +113,7 @@ class Proj4GUI( QMainWindow ):
 			self.seq2_chars.setText( '{}'.format(results['seqj_first100']) )
 
 	def loadSequencesFromFile( self ):
-		FILENAME = 'genomes.txt'
+		FILENAME = 'byu-cs312-content-public\projects\project4-gene-sequencing\genomes.txt'
 		raw = open(FILENAME,'r').readlines()
 		sequences = {}
 
